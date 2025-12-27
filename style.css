@@ -1,0 +1,55 @@
+:root {
+  --bg: #121212;
+  --card: #1f1f1f;
+  --text: #ffffff;
+  --accent: #3f8cff;
+}
+
+body {
+  margin: 0;
+  padding: 12px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui;
+  text-align: center;
+}
+
+body.light {
+  --bg: #f5f5f5;
+  --card: #ffffff;
+  --text: #111;
+  --accent: #2962ff;
+}
+
+body.amoled {
+  --bg: #000;
+  --card: #0a0a0a;
+  --text: #fff;
+  --accent: #00e5ff;
+}
+
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  max-width: 360px;
+  margin: 20px auto;
+}
+
+.day {
+  padding: 12px;
+  border-radius: 50%;
+  background: var(--card);
+}
+
+.today {
+  background: var(--accent);
+  font-weight: bold;
+}
+
+.special {
+  grid-column: span 7;
+  border-radius: 12px;
+  background: orange;
+  padding: 10px;
+}
